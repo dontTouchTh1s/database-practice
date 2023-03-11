@@ -1,0 +1,1 @@
+UPDATE `contact` SET `isActive`='deactivate' WHERE id=1

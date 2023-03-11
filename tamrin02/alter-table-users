@@ -1,0 +1,3 @@
+ALTER TABLE `users`
+ ADD `isActive` ENUM("active", "deactivate") NOT NULL
+ AFTER `password`;
