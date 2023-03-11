@@ -1,0 +1,2 @@
+INSERT INTO `users`(`email`, `name`, `password`)
+VALUES ('alim201381@gmail.com,'ali','123456789')

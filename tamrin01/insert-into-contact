@@ -1,0 +1,2 @@
+INSERT INTO `contact`(`subject`, `message`, `name`, `email`)
+VALUES ('subject','message','name','email')

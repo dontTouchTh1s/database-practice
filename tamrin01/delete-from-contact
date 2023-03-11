@@ -1,0 +1,2 @@
+DELETE FROM contact
+WHERE id=1

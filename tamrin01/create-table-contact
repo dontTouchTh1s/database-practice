@@ -1,0 +1,7 @@
+CREATE TABLE `test`.`contact`
+ (`id` INT NOT NULL AUTO_INCREMENT ,
+  `subject` VARCHAR(64) NOT NULL ,
+  `message` TEXT NOT NULL ,
+  `name` VARCHAR(32) NOT NULL ,
+  `email` VARCHAR(256) NULL ,
+  PRIMARY KEY (`id`)) ENGINE = InnoDB;
