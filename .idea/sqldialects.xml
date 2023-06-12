@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/Attendance/Auth/login.php" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/Attendance/Database/CreateTables.php" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/Attendance/Database/Seeder.php" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/Attendance/GroupPolicies.php" dialect="GenericSQL" />
+    <file url="PROJECT" dialect="MySQL" />
+  </component>
+  <component name="SqlResolveMappings">
+    <file url="file://$PROJECT_DIR$/Attendance/CreatePenaltyCondition.php" scope="{&quot;node&quot;:{  &quot;@negative&quot;:&quot;1&quot;,  &quot;group&quot;:{   &quot;@kind&quot;:&quot;root&quot;,   &quot;node&quot;:{    &quot;name&quot;:{     &quot;@qname&quot;:&quot;14370dc5-37d3-4fe7-8851-d498a10bfcfd&quot;    },    &quot;group&quot;:{     &quot;@kind&quot;:&quot;schema&quot;,     &quot;node&quot;:{      &quot;name&quot;:{       &quot;@qname&quot;:&quot;test&quot;      }     }    }   }  } }}" />
+    <file url="file://$PROJECT_DIR$/Attendance/UpdateGroupPolicy.php" scope="{&quot;node&quot;:{  &quot;@negative&quot;:&quot;1&quot;,  &quot;group&quot;:{   &quot;@kind&quot;:&quot;root&quot;,   &quot;node&quot;:{    &quot;name&quot;:{     &quot;@qname&quot;:&quot;14370dc5-37d3-4fe7-8851-d498a10bfcfd&quot;    },    &quot;group&quot;:{     &quot;@kind&quot;:&quot;schema&quot;,     &quot;node&quot;:{      &quot;name&quot;:{       &quot;@qname&quot;:&quot;test&quot;      }     }    }   }  } }}" />
+    <file url="PROJECT" scope="{&quot;node&quot;:{  &quot;@negative&quot;:&quot;1&quot;,  &quot;group&quot;:{   &quot;@kind&quot;:&quot;root&quot;,   &quot;node&quot;:{    &quot;name&quot;:{     &quot;@qname&quot;:&quot;14370dc5-37d3-4fe7-8851-d498a10bfcfd&quot;    },    &quot;group&quot;:{     &quot;@kind&quot;:&quot;schema&quot;,     &quot;node&quot;:{      &quot;name&quot;:{       &quot;@qname&quot;:&quot;test&quot;      }     }    }   }  } }}" />
+  </component>
+</project>

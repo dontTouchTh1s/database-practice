@@ -1,7 +1,7 @@
 <?php
 /** @var mysqli $mysql */
 
-include "dbConfig.php";
+include "Config.php";
 $mysql = new mysqli(HOST, USER, PASSWORD, DATABASE);
 
 $query =
@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS employees(
     group_policies_id INT NOT NULL,
     manager_id INT,
     PRIMARY KEY (`id`),
-    INDEX employees_email_unique (email),
+    UNIQUE employees_email_unique (email),
     INDEX employees_manager_id_foreign (`manager_id`),
     CONSTRAINT `employees_manager_id_foreign` FOREIGN KEY (`manager_id`) REFERENCES `employees`(`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
 ) ENGINE = InnoDB;
@@ -67,7 +67,7 @@ CREATE TABLE IF NOT EXISTS `penalty_conditions`(
     name VARCHAR(20) NOT NULL,
     type ENUM(\"delay\", \"cuttingOut\", \"leaveAttendance\"),
     duration INT NOT NULL,
-    leave_time INT NOT NULL,
+    penalty INT NOT NULL,
     group_policy_id INT NOT NULL,
     PRIMARY KEY (`id`),
     INDEX penalty_conditions_group_policy_id_foreign (`group_policy_id`),
