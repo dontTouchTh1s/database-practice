@@ -5,7 +5,7 @@ include "Config.php";
 $mysql = new mysqli(HOST, USER, PASSWORD, DATABASE);
 
 $query =
-"
+    "
 CREATE TABLE IF NOT EXISTS employees(
     id INT AUTO_INCREMENT NOT NULL,
     email VARCHAR(255) NOT NULL,
@@ -25,23 +25,23 @@ CREATE TABLE IF NOT EXISTS `leave_requests`(
     `type` ENUM(\"daily\",\"hourly\") NOT NULL,
     `from_date` timestamp NOT NULL,
     `to_date` timestamp NOT NULL,
-    `from_hour` timestamp NOT NULL,
-    `to_hour` timestamp NOT NULL,
-    employee_id INT NOT NULL,
+    `from_hour` timestamp,
+    `to_hour` timestamp,
     PRIMARY KEY (`id`)    
 ) ENGINE = InnoDB;
 
 CREATE TABLE IF NOT EXISTS `requests`(
-    id INT NOT NULL,
+    id INT AUTO_INCREMENT NOT NULL ,
     requestable_id INT NOT NULL,
     requestable_type VARCHAR(255) NOT NULL,
     employee_id INT NOT NULL,
-    status ENUM(\"accepted\", \"declined\", \"pending\"),
+    status ENUM(\"accepted\", \"declined\", \"pending\") DEFAULT 'pending',
     feedback TEXT,
-    description TEXT,
+    description TEXT NOT NULL,
     PRIMARY KEY (`id`),
-    INDEX leave_requests_employee_id_foreign (`employee_id`),
-    CONSTRAINT `leave_requests_employee_id_foreign` FOREIGN KEY (`employee_id`) REFERENCES `employees`(`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
+    INDEX requests_employee_id_foreign (`employee_id`),
+    INDEX requests_requestable_type_requestable_id_index	 (`employee_id`),
+    CONSTRAINT `requests_employee_id_foreign` FOREIGN KEY (`employee_id`) REFERENCES `employees`(`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
 ) ENGINE = InnoDB;
 
 CREATE TABLE IF NOT EXISTS `attendance_leave_times`(
