@@ -1,12 +1,24 @@
-.form-flex{
+.form-flex {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
-input{
+
+
+input, select {
     height: 38px;
     padding: 4px;
 }
-button{
+
+input[type=radio] {
+    height: 15px;
+}
+
+button {
     height: 54px;
+}
+
+.form-update input {
+    max-width: 70px;
+    height: 28px;
 }
