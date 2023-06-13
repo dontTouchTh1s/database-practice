@@ -27,13 +27,13 @@ $groupPolicies = $groupPolicies->fetch_all();
 <?php
 foreach ($result as $item) {
     echo
-    "<form action='UpdatePenaltyCondition.php' method='post'>
-        <input name='id' readonly value=$item[0]>
-        <input name='name' value=$item[1]>
-        <input name='type' value=$item[2]>
-        <input name='duration' value=$item[3]>
-        <input name='penalty' value=$item[4]>
-        <select name='group-policy-id'>";
+    "<form action='UpdatePenaltyCondition.php' method='post' class='form-update'>
+        id<input name='id' readonly value=$item[0]>
+        name<input name='name' value=$item[1]>
+        type<input name='type' value=$item[2]>
+        duration<input name='duration' value=$item[3]>
+        penalty<input name='penalty' value=$item[4]>
+        group policy<select name='group-policy-id'>";
     foreach ($groupPolicies as $groupPolicy) {
         if ($groupPolicy[1] == $item[5])
             echo "<option value='$groupPolicy[0]' selected>$groupPolicy[1]</option>";
